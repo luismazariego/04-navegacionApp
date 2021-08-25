@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Text, TouchableOpacity, View } from "react-native";
 import { StackScreenProps } from "@react-navigation/stack";
 import { styles } from "../theme/appTheme";
-
+import Icon from "react-native-vector-icons/Ionicons";
 interface Props extends StackScreenProps<any, any> {}
 
 export const Pagina1Screen = ({ navigation }: Props) => {
@@ -13,11 +13,14 @@ export const Pagina1Screen = ({ navigation }: Props) => {
         title='Ir a pagina 2'
         onPress={() => navigation.navigate("Pagina2Screen")}
       />
-      <Text style={{
-        marginVertical: 20,
-        fontSize: 20,
-        // marginLeft: 5
-      }}>Navegar con argumentos</Text>
+      <Text
+        style={{
+          marginVertical: 20,
+          fontSize: 20,
+          // marginLeft: 5
+        }}>
+        Navegar con argumentos
+      </Text>
       <View style={{ flexDirection: "row" }}>
         <TouchableOpacity
           style={{ ...styles.botonGrande, backgroundColor: "#5856d6" }}
@@ -28,6 +31,7 @@ export const Pagina1Screen = ({ navigation }: Props) => {
             })
           }>
           <Text style={styles.botonGrandeTexto}>Pedro</Text>
+          <Icon name='male-sharp' size={20} color='white' />
         </TouchableOpacity>
         <TouchableOpacity
           style={{ ...styles.botonGrande, backgroundColor: "#ff9427" }}
@@ -38,6 +42,7 @@ export const Pagina1Screen = ({ navigation }: Props) => {
             })
           }>
           <Text style={styles.botonGrandeTexto}>Maria</Text>
+          <Icon name='female-sharp' size={20} color='white' />
         </TouchableOpacity>
       </View>
     </View>
